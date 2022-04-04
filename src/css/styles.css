@@ -1,0 +1,447 @@
+#app {
+  min-height: 100vh;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#fbc2eb), to(#f1e8b7));
+  background: linear-gradient(to right, #fbc2eb, #f1e8b7);
+}
+
+#app .logged-in {
+  background: #fafafa;
+}
+
+h1 {
+  font-weight: 600;
+  color: #3a3860;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+.login-form, .register-form {
+  background-color: #FFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px 3px #d2d2d2;
+          box-shadow: 0px 0px 10px 3px #d2d2d2;
+}
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.btn {
+  border: 0;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  border-radius: 25px;
+}
+
+.btn.primary {
+  background-color: white;
+  color: black;
+}
+
+.btn.gradient {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to right, #f4acdf 30%, #a6c1ee);
+}
+
+.btn.gradient:hover {
+  color: #fff;
+}
+
+.btn.logout {
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to right, #f4acdf 30%, #a6c1ee);
+  margin-top: auto;
+}
+
+.btn a {
+  color: white;
+  display: block;
+}
+
+.btn a:hover {
+  text-decoration: none;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0px 0px 23px 0px #acc1ee;
+          box-shadow: 0px 0px 23px 0px #acc1ee;
+}
+
+.btn.home {
+  background: white;
+}
+
+.btn.home a {
+  color: #2d2d2d;
+  display: block;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.btn.home a:hover {
+  color: #4d4c4c;
+}
+
+.form-control {
+  border-radius: 25px;
+}
+
+.btn.login {
+  font-size: 20px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to right, #f4acdf 30%, #a6c1ee);
+  color: white;
+}
+
+.btn.login::before {
+  content: 'Login';
+  padding: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 0;
+  opacity: 0;
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to left, #f4acdf 30%, #a6c1ee);
+  bottom: 0;
+  right: 0;
+  border-radius: 25px;
+  color: white;
+}
+
+.btn.login:hover::before {
+  opacity: 1;
+}
+
+.btn.register {
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to right, #f4acdf 30%, #a6c1ee);
+  color: white;
+}
+
+.btn.register::before {
+  content: 'Register';
+  padding: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 0;
+  opacity: 0;
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to left, #f4acdf 30%, #a6c1ee);
+  bottom: 0;
+  right: 0;
+  border-radius: 25px;
+  color: white;
+}
+
+.btn.register:hover::before {
+  opacity: 1;
+}
+
+.btn.reset-password {
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, right top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to right, #f4acdf 30%, #a6c1ee);
+  color: white;
+}
+
+.btn.reset-password::before {
+  content: 'Reset password';
+  padding: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  z-index: 0;
+  opacity: 0;
+  background: -webkit-gradient(linear, right top, left top, color-stop(30%, #f4acdf), to(#a6c1ee));
+  background: linear-gradient(to left, #f4acdf 30%, #a6c1ee);
+  bottom: 0;
+  right: 0;
+  border-radius: 25px;
+  color: white;
+}
+
+.btn.reset-password:hover::before {
+  opacity: 1;
+}
+
+.error {
+  text-align: left;
+  padding: 10px 0px;
+  color: red;
+  font-weight: 500;
+}
+
+.sidebar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbc2eb), to(#f1e8b7));
+  background: linear-gradient(to bottom, #fbc2eb, #f1e8b7);
+  height: 100vh;
+}
+
+.sidebar a {
+  color: #3a3860;
+  font-size: 20px;
+}
+
+.sidebar a.router-link-exact-active {
+  font-weight: 600;
+}
+
+.b-icon.bi {
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.b-icon.bi.showSidebar {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.hamburger {
+  margin-top: 15px;
+}
+
+.dashboard-component {
+  background-color: #FFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 50px #abb7e9;
+          box-shadow: 0px 10px 50px #abb7e9;
+  position: relative;
+  font-size: 1.12em;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.dashboard-component .close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.dashboard-component.pink {
+  background: #e7a8dae6;
+  color: white;
+  -webkit-box-shadow: 0px 10px 50px #e4b2db;
+          box-shadow: 0px 10px 50px #e4b2db;
+}
+
+.dashboard-component.pink svg {
+  color: white;
+}
+
+.dashboard-component.blue {
+  background: #a9c0ed;
+  color: white;
+}
+
+.dashboard-component.blue svg {
+  color: white;
+}
+
+.dashboard-home-hover .dashboard-component:hover {
+  opacity: .9;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.list-item {
+  border-radius: 8px;
+  background-color: #b4ddf033;
+  padding: 15px;
+}
+
+.list-item span {
+  font-size: 18px;
+}
+
+.delete-modal, .modal-nodata {
+  padding: 2em;
+  background-color: #FFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 50px #abb7e9;
+          box-shadow: 0px 10px 50px #abb7e9;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.452);
+}
+
+.delete-item svg {
+  background: #d9e6ed;
+  border-radius: 25px;
+  padding: 4px;
+  height: 50px;
+  width: 50px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.delete-item svg:hover {
+  -webkit-box-shadow: 0px 0px 30px #868eb3;
+          box-shadow: 0px 0px 30px #868eb3;
+}
+
+.message {
+  background: #d2e0e9;
+  padding: 10px;
+}
+
+.back {
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.back:hover {
+  opacity: .7;
+}
+
+#doughnut-chart {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+}
+
+.weight {
+  font-size: 3.1em;
+  font-weight: 500;
+}
+
+.edit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: 0;
+}
+
+.edit-button .b-icon.bi {
+  font-size: 1.8em;
+}
+
+.text-pink {
+  color: #e29dd3;
+  font-weight: bold;
+}
+
+[v-cloak] {
+  display: none !important;
+}
+
+#nav {
+  padding: 20px;
+}
+
+#nav a:first-child:hover {
+  text-decoration: none;
+}
+
+#nav .logo {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#nav .logo:hover {
+  text-decoration: none;
+}
+
+#nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+#nav a .b-icon.bi {
+  font-size: 1.3em;
+  margin-right: 15px;
+}
+
+.mobile-sidebar.showSidebar .sidebar {
+  left: 0;
+}
+
+.mobile-sidebar .sidebar {
+  width: 200px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbc2eb), to(#f1e8b7));
+  background: linear-gradient(to bottom, #fbc2eb, #f1e8b7);
+}
+
+.mobile-sidebar #nav {
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
