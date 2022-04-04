@@ -25,13 +25,13 @@ import { initializeAuth, browserLocalPersistence } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
 const firebaseApp = initializeApp({
-  apiKey: "XXXXX",
-  authDomain: "XXXXXX",
-  projectId: "XXXXXX",
-  storageBucket: "XXXXXX",
-  messagingSenderId: "XXXX",
-  appId: "XXXX",
-  measurementId: "XXXXX"
+  apiKey: "AIzaSyBpd5u1enaEdYgtH_fIEI6cpye6riU9rvg",
+  authDomain: "weight-tracking-f9ab3.firebaseapp.com",
+  projectId: "weight-tracking-f9ab3",
+  storageBucket: "weight-tracking-f9ab3.appspot.com",
+  messagingSenderId: "708947328103",
+  appId: "1:708947328103:web:26abd5c633e146890168c2",
+  measurementId: "G-PFEBNK3R5V"
 });
 const auth = initializeAuth(firebaseApp, {
   persistence: browserLocalPersistence,
